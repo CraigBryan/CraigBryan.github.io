@@ -40,7 +40,6 @@ $(document).ready(function() {
    * Deals with highlighting links as the user scrolls
    */
   (function () {
-    //list of li in menu (where the styling is applied)
     var menuItems = jQuery("#menu li");
 
     var tops = undefined;
@@ -86,9 +85,14 @@ $(document).ready(function() {
       toggleActiveMenuItem(index);
     };
 
-    //When scrolling, highlight proper one.
+    //When scrolling, highlight proper menu item
     $(window).scroll(function () {
       highlightMenu();
+    });
+
+    //Resets the tops array when the window is resized
+    $(window).resize(function () {
+      tops = undefined;
     });
 
     highlightMenu(); //Highlights the right one at the start
