@@ -118,6 +118,7 @@ body {
   .header h2 {
     font-weight: 400;
     margin: 0;
+    font-size: 1.5em;
   }
 
   .header a {
@@ -142,5 +143,16 @@ body {
   .header .right {
     float: left;
     text-align: left;
+  }
+}
+
+@media (max-width: 45.5em) {
+  /* shrinking stuff in the header on small screens */
+  .header h1 {
+    font-size: 3em;
+  }
+
+  .header h2 {
+    font-size: 1em;
   }
 }
