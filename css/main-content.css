@@ -1,0 +1,40 @@
+
+  .content #skills h3 {
+    margin-left: 1em;
+  }
+
+  .content .portrait {
+    width:400px;
+    float: left;
+    margin: 0 3em 3em 0;
+  }
+
+  .content .image-container {
+    margin: 0 1em;
+    text-align: center;
+  }
+
+  .content .reference {
+    margin-bottom: 2em;
+    overflow: auto;
+    float: left;
+    margin-right: 3em;
+  }
+
+  .content .reference img {
+    max-width: 200px;
+    margin-right: 2em;
+    float: left;
+    clear: left;
+  }
+
+  .content .reference p {
+    margin-top: 2em;
+    float: left;
+  }
+
+.subsection {
+  padding-top: 4.5em;
+}
+
+

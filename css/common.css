@@ -177,6 +177,111 @@ small screens.
       margin-top: 0.6em;
     }
 
+/*
+  Header styling
+*/
+
+.header {
+  position: fixed;
+  z-index:9;
+  width:100%;
+  color: #333;
+  padding: 1em 0em 0.5em;
+  border-bottom: 10px solid #191818;
+  background-color: #86BA84;
+  opacity: 0.90;
+  overflow: hidden;
+ }
+
+  .header .left {
+    float: left;
+    margin-top: 0.7em;
+  }
+
+  .header .right {
+    float: right;
+    text-align: right;
+    margin-right: 1em;
+  }
+
+  .header h1 {
+    margin: 0;
+    font-size: 4em;
+    font-weight: 300;
+  }
+
+  .header h2 {
+    font-weight: 400;
+    margin: 0;
+    font-size: 1.5em;
+  }
+
+  .header a {
+    text-decoration: none;
+    color: #333;
+  }
+
+    .header a h2 {
+      display: inline;
+    }
+
+  .header a:hover {
+    color: #666;
+  }
+
+/* 
+  Common style elements in the main content of pages 
+*/
+
+body {
+  /* Background pattern from subtlepatterns.com */
+  background-image: url('../assets/congruent_outline.png');
+}
+
+.content {
+  margin: 0 auto;
+  padding: 3em 2em;
+  max-width: 1200px;
+  margin-bottom: 50px;
+  line-height: 1.6em;
+}
+
+  .content p {
+    color: #ccc;
+  }
+
+  .content a:link {
+    color: #74FF70;
+    text-decoration: none;
+  }
+
+  .content a:visited {
+    color: #418A3E;
+    text-decoration: none;
+  }
+
+  .content a:hover {
+    color: #418A3E;
+    text-decoration: none;
+  }
+
+  .content img {
+    max-width:100%;
+  }
+
+  .content h1, .content h2, .content h3 {
+    color: #ccc;
+  }
+
+  .content li {
+    color: #ccc;
+  }
+
+  .content h1 {
+    margin: 2em 0 1em 0;
+    font-weight: 300;
+    line-height: 1em;
+  }
 
 /* -- Responsive Styles (Media Queries) ------------------------------------- */
 
@@ -185,12 +290,17 @@ Hides the menu at `70em'
 */
 @media (min-width: 70em) {
 
-  #header div {
-    margin-left: 10em;
+  .header div {
     float: left;
   }
 
+  .header .left {
+    margin-left: 10em;
+  }
+
   .header .right {
+    margin-left: 6.5em;
+    float: left;
     text-align: left;
   }
 
@@ -211,5 +321,59 @@ Hides the menu at `70em'
 
   #layout.active .menu-link {
     left: 150px;
+  }
+}
+
+@media (max-width: 45.5em) {
+  /* shrinking stuff in the header on small screens */
+  .header .left {
+    margin-top: 0;
+  }
+
+  .header h1 {
+    font-size: 3em;
+  }
+
+  .header h2 {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 33.5em) {
+  /* shrinking stuff in the header more on really small screens */
+  .header .left {
+    margin-top: 1.2em;
+  }
+
+  .header h1 {
+    font-size: 2em;
+  }
+
+  .header h2 {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 27.5em) {
+  /* shrinking stuff in the header more on really really small screens */
+
+  .header .left {
+    margin-top: 1.5em;
+  }
+
+  .header h1 {
+    font-size: 1.5em;
+  }
+
+  .header h2 {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 24.2em) {
+  /* shrinking stuff in the header more on the smallest screens */
+
+  .header h2 {
+    font-size: 0.75em;
   }
 }
