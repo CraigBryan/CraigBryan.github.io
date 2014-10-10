@@ -5,7 +5,7 @@ body {
 
 .content {
   margin: 0 auto;
-  padding: 5em 2em;
+  padding: 3em 2em;
   max-width: 1200px;
   margin-bottom: 50px;
   line-height: 1.6em;
@@ -34,7 +34,7 @@ body {
     max-width:100%;
   }
 
-  .content h1, h2, h3, h4 {
+  .content h1, .content h2, .content h3 {
     color: #ccc;
   }
 
@@ -61,14 +61,6 @@ body {
   .content .image-container {
     margin: 0 1em;
     text-align: center;
-  }
-
-  .content .image-container-left {
-
-  }
-
-  .content .image-container-right {
-
   }
 
   .content .reference {
@@ -99,22 +91,55 @@ body {
   position: fixed;
   z-index:9;
   width:100%;
-  margin: 0;
   color: #333;
-  text-align: center;
   padding: 1em 0em 0.5em;
   border-bottom: 10px solid #191818;
   background-color: #86BA84;
   opacity: 0.95;
+  overflow: hidden;
  }
+
+  .header .left {
+    float: left;
+  }
+
+  .header .right {
+    float: right;
+    text-align: right;
+    margin-right: 1em;
+  }
+
   .header h1 {
     margin: 0;
     font-size: 4em;
     font-weight: 300;
   }
-   .header h2 {
-    font-weight: 300;
-    color: #ccc;
-    padding: 0;
-    margin-top: 0;
+
+  .header h2 {
+    font-weight: 400;
+    margin: 0;
   }
+
+  .header a {
+    text-decoration: none;
+    color: #333;
+  }
+
+    .header a h2 {
+      display: inline;
+    }
+
+  .header a:hover {
+    color: #666;
+  }
+
+@media (min-width: 70em) {
+
+#header .left {
+  margin-left: 5em;
+}
+
+.header .right {
+  float: left;
+  text-align: left;
+}

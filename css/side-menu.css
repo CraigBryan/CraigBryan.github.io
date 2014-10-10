@@ -185,16 +185,20 @@ Hides the menu at `70em'
 */
 @media (min-width: 70em) {
 
-  .header,
-  .content {
-    padding-left: 2em;
-    padding-right: 2em;
+  #header div {
+    margin-left: 10em;
+    float: left;
+  }
+
+  .header .right {
+    text-align: left;
   }
 
   #layout {
     padding-left: 150px; /* left col width "#menu" */
     left: 0;
   }
+
   #menu {
     left: 150px;
   }
