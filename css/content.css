@@ -17,11 +17,12 @@ body {
 
   .content .portrait {
     width:400px;
+    float: left;
+    margin: 0 3em 3em 0;
   }
 
   .content .image-container {
-    margin: 0 2em;
-    text-align: center;
+    margin: auto;
   }
 
   .content .image-container-left {
@@ -32,20 +33,46 @@ body {
     margin: 0 0 0 2em;
   }
 
+  .content .reference {
+    margin-bottom: 2em;
+    overflow: auto;
+    float: left;
+    margin-right: 3em;
+  }
+
+  .content .reference img {
+    max-width: 200px;
+    margin-right: 2em;
+    float: left;
+    clear: left;
+  }
+
+  .content .reference p {
+    margin-top: 2em;
+    float: left;
+  }
+
   .content img {
     max-width:100%;
   }
 
+  .content h1, h2, h3, h4 {
+    color: #ccc;
+  }
+
+  .content li {
+    color: #ccc;
+  }
+  
+  .content #skills h3 {
+    margin-left: 1em;
+  }
+
   .content h1 {
-    margin: 50px 0 20px 0;
+    margin: 2em 0 1em 0;
     font-weight: 300;
-    color: #ccc;
   }
-
-  .content h2, h3, h4 {
-    color: #ccc;
-  }
-
+  
   .content a:link {
     color: #74FF70;
     text-decoration: none;
