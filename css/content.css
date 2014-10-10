@@ -156,3 +156,18 @@ body {
     font-size: 1em;
   }
 }
+
+@media (max-width: 33.5em) {
+  /* shrinking stuff in the header more on really small screens */
+  .header .left {
+    margin-top: 1em;
+  }
+
+  .header h1 {
+    font-size: 2em;
+  }
+
+  .header h2 {
+    font-size: 1em;
+  }
+}
