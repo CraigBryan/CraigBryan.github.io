@@ -1,5 +1,9 @@
 /* Styles for the main page */
 
+.content {
+  padding-top: 2em;
+}
+
 .content h1 {
   margin: 1em 0 1em 0;
 }
@@ -43,7 +47,5 @@
 }
 
 .subsection {
-  padding-bottom: 2em;
+  padding-top: 6em;
 }
-
-
