@@ -1,0 +1,7 @@
+/* Styles for the trip advisor cover letter page */
+
+.content .image-container {
+  max-width: 500px;
+  float: right;
+  margin: 0 1em;
+}
