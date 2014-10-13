@@ -3,9 +3,11 @@
 
 "use strict";
 
-var properties = {
+var configs = {
   "header height": 200,
-  "scroll duration": 750
+  "scroll duration": 750,
+  "menu active class": 'active'
+
 };
 
 $(document).ready(function () {
@@ -28,20 +30,20 @@ $(document).ready(function () {
       }
     };
 
+    function toggleMenuElements() {
+      toggleClass(layout, configs["menu active class"]);
+      toggleClass(menu, configs["menu active class"]);
+      toggleClass(menuLink, configs["menu active class"]);
+    };
+
     menuLink.click(function (e) {
-      var active = 'active';
       e.preventDefault();
-      toggleClass(layout, active);
-      toggleClass(menu, active);
-      toggleClass(menuLink, active);
+      toggleMenuElements();
     });
 
     $('#menu a').click(function (e) {
-      var active = 'active';
-      if (menu.hasClass(active)) {
-        toggleClass(layout, active);
-        toggleClass(menu, active);
-        toggleClass(menuLink, active);
+      if (menu.hasClass(configs["menu active class"])) {
+        toggleMenuElements();
       }
     });
   }());
@@ -58,7 +60,7 @@ $(document).ready(function () {
       $('html, body').stop().animate(
         { 'scrollTop': $target.offset().top },
         {
-          duration: properties["scroll duration"],
+          duration: configs["scroll duration"],
           easing: 'swing'
         }
       );
@@ -80,7 +82,7 @@ $(document).ready(function () {
     };
 
     function calculateScroll() {
-      return $(window).scrollTop() + properties["header height"];
+      return $(window).scrollTop() + configs["header height"];
     };
 
     function toggleActiveMenuItem(index) {
@@ -99,6 +101,10 @@ $(document).ready(function () {
 
       if(tops === null) {
         calculateTops();
+      }
+
+      if(tops.length === 0) {
+        return;
       }
 
       for (var i = 0; i < tops.length - 1; ++i) {
@@ -120,7 +126,7 @@ $(document).ready(function () {
 
     //Resets the tops array when the window is resized
     $(window).resize(function () {
-      tops = undefined;
+      tops = null;
     });
 
     highlightMenu(); //Highlights the right one at the start
