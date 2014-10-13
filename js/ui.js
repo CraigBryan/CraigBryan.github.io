@@ -1,16 +1,26 @@
-$(document).ready(function() {
+/*jslint browser: true*/
+/*global $, jQuery*/
+
+"use strict";
+
+var properties = {
+  "header height": 200,
+  "scroll duration": 750
+};
+
+$(document).ready(function () {
 
   /*
    * Deals with the showing and hiding of the menu at the side
    */
   (function () {
 
-    var layout   = $('#layout'),
-        menu     = $('#menu'),
-        menuLink = $('#menuLink');
+    var layout = $('#layout'),
+      menu = $('#menu'),
+      menuLink = $('#menuLink');
 
     function toggleClass(element, className) {
-      if(element.hasClass(className)) {
+      if (element.hasClass(className)) {
         element.removeClass(className);
 
       } else {
@@ -28,7 +38,7 @@ $(document).ready(function() {
 
     $('#menu a').click(function (e) {
       var active = 'active';
-      if(menu.hasClass(active)) {
+      if (menu.hasClass(active)) {
         toggleClass(layout, active);
         toggleClass(menu, active);
         toggleClass(menuLink, active);
@@ -37,26 +47,44 @@ $(document).ready(function() {
   }());
 
   /*
+   * Smooth scrolling for menu links
+   */
+  (function () {
+    $('#menu a[href^="#"]').click(function (e) {
+      e.preventDefault();
+
+      var $target = $(this.hash);
+
+      $('html, body').stop().animate(
+        { 'scrollTop': $target.offset().top },
+        {
+          duration: properties["scroll duration"],
+          easing: 'swing'
+        }
+      );
+    });
+  }());
+
+  /*
    * Deals with highlighting links as the user scrolls
    */
   (function () {
-    var menuItems = jQuery("#menu li");
-
-    var tops = undefined;
+    var menuItems = jQuery("#menu li"),
+    tops = null;
 
     function calculateTops() {
       tops = [];
-      jQuery(".subsection").each(function (index) {
+      $(".subsection").each(function (index) {
         tops[index] = $(this).offset().top;
       });
     };
 
     function calculateScroll() {
-      return $(window).scrollTop() + 200;
+      return $(window).scrollTop() + properties["header height"];
     };
 
     function toggleActiveMenuItem(index) {
-      for(var i = 0; i < menuItems.length; ++i) {
+      for (var i = 0; i < menuItems.length; ++i) {
         if(i === index) {
           $(menuItems[i]).addClass("menu-item-divided pure-menu-selected");
         } else {
@@ -65,15 +93,15 @@ $(document).ready(function() {
       }
     };
 
-    function highlightMenu() {
+    function highlightMenu () {
       var scroll = calculateScroll();
       var index = 0;
 
-      if(tops === undefined) {
+      if(tops === null) {
         calculateTops();
       }
 
-      for(var i = 0; i < tops.length - 1; ++i) {
+      for (var i = 0; i < tops.length - 1; ++i) {
         if(scroll >= tops[i] && scroll < tops[i+1]) {
           index = i;
           break;
