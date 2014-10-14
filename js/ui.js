@@ -64,6 +64,8 @@ $(document).ready(function () {
           easing: 'swing'
         }
       );
+
+      $(this).blur();
     });
   }());
 
