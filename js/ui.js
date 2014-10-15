@@ -4,7 +4,7 @@
 "use strict";
 
 var configs = {
-  "header height": 200,
+  "header height": 150,
   "scroll duration": 750,
   "menu active class": 'active'
 
