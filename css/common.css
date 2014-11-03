@@ -2,6 +2,14 @@ body {
   color: #777;
 }
 
+p, h1, h2, h3, li {
+  font-family: "Fira Sans", sans-serif;
+}
+
+p {
+  font-weight: bold;
+}
+
 .pure-img-responsive {
   max-width: 100%;
   height: auto;
@@ -65,6 +73,7 @@ appears on the left side of the page.
     color: #999;
     border: none;
     padding: 0.6em 0 0.6em 0.6em;
+    line-height: 1.2em;
   }
 
   #menu li a:hover, #menu li a:active, 
@@ -110,7 +119,7 @@ appears on the left side of the page.
   */
   #menu .pure-menu-selected,
   #menu .pure-menu-heading {
-    background: #23A51F;
+    background: #2E5D2B;
   }
 
   /*
@@ -213,13 +222,14 @@ small screens.
   .header h1 {
     margin: 0;
     font-size: 4em;
-    font-weight: 300;
+    font-weight: lighter;
+    line-height: 1em;
   }
 
   .header h2 {
-    font-weight: 400;
     margin: 0;
     font-size: 1.5em;
+    line-height: 1.2em;
   }
 
   .header a {
@@ -277,6 +287,7 @@ body {
 
   .content h1, .content h2, .content h3 {
     color: #ccc;
+    font-weight: lighter;
   }
 
   .content li {
@@ -284,7 +295,6 @@ body {
   }
 
   .content h1 {
-    font-weight: 300;
     line-height: 1em;
   }
 

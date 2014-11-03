@@ -1,0 +1,56 @@
+@font-face {
+  font-family: "Fira Sans";
+  src: url('../assets/fonts/fira-sans/FiraSans-Light.otf');
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  src: url('../assets/fonts/fira-sans/FiraSans-LightItalic.otf');
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  src: url('../assets/fonts/fira-sans/FiraSans-ExtraLight.otf');
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  src: url('../assets/fonts/fira-sans/FiraSans-ExtraLightItalic.otf');
+  font-style: italic;
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  src: url('../assets/fonts/fira-sans/FiraSans-Book.otf');
+  font-weight: bold;
+}
+
+/*
+@-moz-document url-prefix() {
+  @font-face {
+    font-family: "Fira Sans";
+    src: url('../assets/fonts/fira-sans/FiraSans-Light.otf');
+  }
+
+  @font-face {
+    font-family: "Fira Sans";
+    src: url('../assets/fonts/fira-sans/FiraSans-LightItalic.otf');
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: "Fira Sans";
+    src: url('../assets/fonts/fira-sans/FiraSans-ExtraLight.otf');
+    font-weight: lighter;
+  }
+
+  @font-face {
+    font-family: "Fira Sans";
+    src: url('../assets/fonts/fira-sans/FiraSans-ExtraLightItalic.otf');
+    font-style: italic;
+    font-weight: lighter;
+  }
+}*/
