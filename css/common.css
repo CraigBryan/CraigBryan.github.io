@@ -1,5 +1,8 @@
 body {
   color: #777;
+
+   /* Background pattern from subtlepatterns.com */
+  background-image: url('../assets/congruent_outline.png');
 }
 
 p, h1, h2, h3, li {
@@ -8,6 +11,15 @@ p, h1, h2, h3, li {
 
 p {
   font-weight: bold;
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.35;
+  z-index: 1;
 }
 
 .pure-img-responsive {
@@ -35,6 +47,7 @@ This is the parent `<div>` that contains the menu and the content area.
   position: relative;
   padding-left: 0;
   background-color:none;
+  z-index: 2;
 }
   #layout.active {
     position: relative;
@@ -248,11 +261,6 @@ small screens.
 /* 
   Common style elements in the main content of pages 
 */
-
-body {
-  /* Background pattern from subtlepatterns.com */
-  background-image: url('../assets/congruent_outline.png');
-}
 
 .content {
   margin: 0 auto;
